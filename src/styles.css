@@ -16,14 +16,16 @@ header {
 
 h1 {
     position: absolute;
-    bottom: 5%;
-    left: 30%;
+    bottom: 0;
+    left: 7%;
     font-size: 4vh;
     color: #fff;
+    z-index: 1;
 }
 
 .about-me-image-container {
     float: inline-start;
+    position: relative;
 }
 
 .image-one {
@@ -56,6 +58,10 @@ h1 {
 
     header {
         display: block;
+    }
+
+    h1 {
+        left: 20%;
     }
 
     .about-me-container {
