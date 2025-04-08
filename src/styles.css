@@ -1,15 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-main {
-    background: linear-gradient(168deg, #1394c7 50%, #FFFFFF 50.3%);
-}
-
-section, header {
     max-width: 1000px;
     margin: 0 auto;
+    background: linear-gradient(168deg, #1394c7 25%, #FFFFFF 25.1%);
+    background-repeat: no-repeat;
 }
 
 header {
@@ -25,6 +20,10 @@ h1 {
     font-size: 2.5rem;
     color: #FFFFFF;
     z-index: 1;
+}
+
+i {
+    cursor: pointer;
 }
 
 .about-me-image-container {
@@ -56,13 +55,64 @@ h1 {
     font-size: 30px;
 }
 
-@media (max-width: 1024px) {
-    main {
-        padding-top: 70px;
-        background: linear-gradient(168deg, #1394c7 60%, #FFFFFF 60.3%);
-    }
+section {
+    padding: 15px;
+}
 
-    section, header {
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshot {
+    background-color: mediumseagreen;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+}
+
+.project-info {
+    padding: 20px;
+    box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h3 {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.title i {
+    margin: 0 15px;
+    font-size: 1.4rem;
+}
+
+.title a {
+    display: block;
+    height: 25px;
+}
+
+.title img {
+    width: 25px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding-top: 70px;
         max-width: 700px;
     }
 
@@ -95,12 +145,20 @@ h1 {
         transform: none;
         max-width: 350px;
     }
+
+    section {
+        padding: 25px;
+    }
+
+    .work-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 648px) {
-    main {
+    body {
         padding-top: 0;
-        background: linear-gradient(168deg, #1394c7 45%, #FFFFFF 45.3%);
+        background: linear-gradient(167deg, #1394c7 15%, #FFFFFF 15.1%);
     }
 
     header {
@@ -144,5 +202,15 @@ h1 {
 
     .about-me-links {
         justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    body {
+        background: linear-gradient(167deg, #1394c7 9%, #FFFFFF 9.1%);
+    }
+
+    .work-container {
+        grid-template-columns: 1fr;
     }
 }
