@@ -1,10 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(168deg, #0891b2 20%, #FFFFFF 20.1%);
+    background-repeat: no-repeat;
+}
+
+header, section, .footer-container {
     max-width: 1000px;
     margin: 0 auto;
-    background: linear-gradient(168deg, #1394c7 25%, #FFFFFF 25.1%);
-    background-repeat: no-repeat;
 }
 
 header {
@@ -20,6 +23,11 @@ h1 {
     font-size: 2.5rem;
     color: #FFFFFF;
     z-index: 1;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin: 15px 0;
 }
 
 i {
@@ -110,9 +118,53 @@ section {
     width: 25px;
 }
 
+footer {
+    margin-top: 50px;
+    background-color: #0891b2;
+    color: #FFFFFF;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 50px 0;
+}
+
+.contact-me {
+    width: 100%;
+}
+
+.contact-me+img {
+    width: 100%;
+}
+
+.contact-me .address p {
+    margin: 0;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-me img {
+    width: 25px;
+}
+
+.contact-me-links {
+    display: flex;
+    gap: 15px;
+    font-size: 30px;
+    color: #000000;
+}
+
 @media (max-width: 1024px) {
     body {
         padding-top: 70px;
+    }
+
+    header, section {
         max-width: 700px;
     }
 
@@ -153,12 +205,18 @@ section {
     .work-container {
         grid-template-columns: 1fr 1fr;
     }
+
+    .footer-container {
+        padding: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
 }
 
-@media (max-width: 648px) {
+@media (max-width: 675px) {
     body {
         padding-top: 0;
-        background: linear-gradient(167deg, #1394c7 15%, #FFFFFF 15.1%);
+        background: linear-gradient(167deg, #0891b2 10%, #FFFFFF 10.1%);
     }
 
     header {
@@ -203,11 +261,20 @@ section {
     .about-me-links {
         justify-content: center;
     }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-me-links {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 575px) {
     body {
-        background: linear-gradient(167deg, #1394c7 9%, #FFFFFF 9.1%);
+        background: linear-gradient(167deg, #0891b2 7%, #FFFFFF 7.1%);
     }
 
     .work-container {
